@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Route Dashboard</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Azure Map styles & JavaScripts -->
+        <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/css/atlas.min.css?api-version=1.0" type="text/css" />
+        <script src="https://atlas.microsoft.com/sdk/js/atlas.min.js?api-version=1.0"></script>
+
+        <!-- Utilities library -->
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+        <style>
+            html,body { height: 100%; }
+            .container-fluid, .row-fluid, #map { height: 100%;}
+            .map-container { height: 100%; padding-bottom: 56px; overflow: hidden; }
+        </style> 
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand mr-auto" href="#">Device Route</a>
+
+                <form class="form-inline my-2 my-lg-0" id="search">
+                    <input class="form-control mr-sm-1" type="search" placeholder="ApplicationId" aria-label="Search" id='appId' value="1771d5c2-9f23-4d92-9668-ed107a82470d" />
+                    <input class="form-control mr-sm-1" type="search" placeholder="DeviceId" aria-label="Search" id='deviceId' value="8vbdov" />
+                    <input class="form-control mr-sm-1" type="search" placeholder="Measurement" aria-label="Search" id='measure' value="position"/>
+                    <select class="form-control mr-sm-1" id="fenceMode">
+                        <option selected value="">Fencing Mode</option>
+                        <option value="radius">Radius</option>
+                        <option value="polygon">Polygon</option>
+                    </select>
+
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Monitor</button>
+                </form>
+            </nav>
+            <div class="map-container">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScripts -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>   
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- Map Functions -->
+        <script src="./scripts/dashboard.js"></script>
+    </body>
+</html>
